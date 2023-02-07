@@ -1,0 +1,9 @@
+project: sc2reader
+target: fuzz-sc2
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_sc2.py
+    libfuzzer: true
+    timeout: 12
