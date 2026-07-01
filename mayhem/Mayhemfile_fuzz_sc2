@@ -1,0 +1,9 @@
+project: sc2reader
+target: fuzz-sc2
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-sc2/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sc2
+    libfuzzer: true
+    timeout: 30
